@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="main2.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-logo-alura">
+        <a
+          class="a-logo-alura"
+          href="https://www.aluracursos.com"
+          target="_blank"
+          ><img class="logo-alura" src="assets\Logo.png" alt="logo de alura."
+        /></a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="input_text">
+          <textarea
+            class="input_text_encrypt"
+            id="input_text_encrypt"
+            placeholder="Ingrese texto aquí"
+          ></textarea>
+          <div class="bottom">
+            <small
+              ><img src="./img/icon.svg" /> letras minusculas y sin
+              acentos</small
+            >
+            <div class="buttons">
+              <button class="button button_encrypt" id="button_encrypt">
+                Encriptar
+              </button>
+              <button class="button button_decrypt" id="button_decrypt">
+                Desencriptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Seccion desencriptar-->
+      <section class="general-div">
+        <div class="right-container">
+          <div class="right-content">
+            <img src="assets\Muñeco.png" alt="" sizes="" srcset="" />
+            <div>
+              <p class="texto">Ningun mensje fue encontrado</p>
+              <span>
+                Ingresa el texto que desees encriptar o desencriptar
+              </span>
+            </div>
+            <div>
+              <button class="botonCopy" id="btn-copiar">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
