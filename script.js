@@ -122,6 +122,24 @@ function borrar() {
     ocultarImagen();
 }
 
+// Función para cambiar el modo
+function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    // Cambia el icono del botón según el modo actual
+    const modeButton = document.getElementById('mode-toggle');
+    if (document.body.classList.contains('dark-mode')) {
+      modeButton.textContent = '🌕'; // Modo oscuro
+    } else {
+      modeButton.textContent = '🌙'; // Modo claro
+    }
+  }
+  
+  // Añadir evento al botón de cambio de modo
+  document.getElementById('mode-toggle').addEventListener('click', toggleMode);
+  
+
+
 foco();
 btn_encriptar.addEventListener("click", verificar);
 btn_encriptar.addEventListener("click", encriptar);

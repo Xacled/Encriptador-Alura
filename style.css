@@ -259,3 +259,22 @@ footer {
 }
 
 
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  color: #000000;
+}
+
+/* Botón de cambio de modo */
+.mode-toggle {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Estilos opcionales para mejorar el aspecto del botón */
+.mode-toggle:focus {
+  outline: none;
+}
