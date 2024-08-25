@@ -3,7 +3,7 @@ const btn_desencriptar = document.getElementById("btn-desencriptar");
 const btn_copiar = document.getElementById("btn-copiar");
 const btn_borrar_1 = document.getElementById("btn-borrar-1");
 const btn_borrar_2 = document.getElementById("btn-borrar-2");
-const filtro = /[A-Z~!@#$%^&*()_+|}{[\]\\\/?=><:"`;.,áéíóúàèìòù'1-9]/g;
+const filtro = /[A-Z~@#$%^&*()_+|}{[\]\\\/?=><:"`;.,áéíóúàèìòù'1-9]/g;
 
 // Función verificar
 function verificar() {
