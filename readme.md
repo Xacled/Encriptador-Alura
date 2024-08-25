@@ -1,32 +1,30 @@
-Encriptador
-🛰️ Encriptador es una aplicación web diseñada para transformar un texto ingresado en un formato encriptado o desencriptado mediante una serie de reglas específicas. La aplicación permite encriptar y desencriptar textos, y también ofrece la opción de copiar el resultado para su reutilización.
+# 🛰️ Encriptador
 
-📑 Reglas de Funcionamiento
-Para el correcto uso del encriptador, se establecieron las siguientes condiciones:
+Esta aplicación web está diseñada para transformar un texto ingresado en una versión encriptada o desencriptada. El encriptador sigue una serie de reglas para sustituir las vocales por claves específicas, permitiendo encriptar o desencriptar el texto. También ofrece una funcionalidad para copiar el resultado.
 
-✅ Solo se pueden utilizar letras minúsculas.
-✅ No se permiten acentos ortográficos ni símbolos especiales.
-✅ El texto debe ser encriptado y desencriptado usando las reglas especificadas.
-✅ El resultado del encriptado o desencriptado debe ser mostrado en la pantalla.
-✅ Se debe incluir un botón para copiar el texto encriptado/desencriptado.
-🔏 Valores de Encriptación
-La encriptación se realiza siguiendo las siguientes equivalencias:
+Además, cuenta con un pie de página que incluye secciones para contacto y enlaces a redes sociales.
 
-Valor	Clave
-a	ai
-e	enter
-i	imes
-o	ober
-u	ufat
-Estas equivalencias funcionan en ambas direcciones, permitiendo convertir un texto encriptado de vuelta a su forma original.
+## 📑 Reglas de Funcionamiento
 
-🚀 Cómo Usar
-Ingresa el texto en el campo correspondiente.
-Selecciona una opción: Encriptar o Desencriptar.
-Presiona el botón para encriptar o desencriptar el texto.
-Copia el texto encriptado/desencriptado utilizando el botón de copiar.
-Borra el texto si lo deseas con el botón de borrar.
-📌 Ejemplos
-Encriptar: "gato" se convierte en "gaitober".
-Desencriptar: "gaitober" se convierte en "gato".
+⚠️ **Condiciones para el uso:**
 
+- ✅ Solo se pueden utilizar letras minúsculas.
+- ✅ No se permiten acentos ortográficos ni símbolos especiales.
+- ✅ Debe ser posible convertir una palabra a su versión encriptada y también devolver una palabra encriptada a su forma original. (Ejemplos: `"gato"` ⇛ `"gaitober"` | `"gaitober"` ⇛ `"gato"`)
+- ✅ La página debe tener campos para ingresar el texto que se encriptará o desencriptará, y el usuario debe poder seleccionar entre estas dos opciones.
+- ✅ El resultado debe mostrarse en pantalla.
+- ✅ Debe haber un botón para copiar el texto encriptado/desencriptado, funcionando de manera similar a `Ctrl+C` o la opción "Copiar" del menú de aplicaciones.
+
+## 🔏 Valores de Encriptación
+
+🕵🏻‍♀️ **Equivalencias:**
+
+| Valor | Clave  |
+|-------|--------|
+| **a** | *ai*   |
+| **e** | *enter*|
+| **i** | *imes* |
+| **o** | *ober* |
+| **u** | *ufat* |
+
+Estas equivalencias se aplican en ambas direcciones, permitiendo convertir el texto encriptado de vuelta a su forma original y viceversa.
