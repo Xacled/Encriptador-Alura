@@ -5,29 +5,25 @@ const btn_borrar_1 = document.getElementById("btn-borrar-1");
 const btn_borrar_2 = document.getElementById("btn-borrar-2");
 const filtro = /[A-Z~!@#$%^&*()_+|}{[\]\\\/?=><:"`;.,áéíóúàèìòù'1-9]/g;
 
-
-//Funcion verificar.
-function verificar(){
+// Función verificar
+function verificar() {
     let texto_nuevo = document.getElementById("texto-encriptar").value;
-    if(texto_nuevo.match(filtro) != null){
+    if (texto_nuevo.match(filtro) != null) {
         limpiar();
         foco();
-        //Alerta de error.
+        // Alerta de error
         Swal.fire({
             title: 'Error!',
-            text: 'Solo letras minúsuclas y sin acentos',
-            imageUrl: './images/DrawKit Vector Illustration Fun & Playful Finn Character (14).svg',
-            imageWidth: 400,
-            imageHeight: 200,
+            text: 'Solo letras minúsculas y sin acentos',
+            icon: "warning",
             imageAlt: 'Imagen de alerta',
         });
     }
 }
 
-//funcion encriptar.
-function encriptar(){
+// Función encriptar
+function encriptar() {
     let texto_nuevo = document.getElementById("texto-encriptar").value.trimStart();
-    texto_nuevo;
     texto_nuevo = texto_nuevo
         .replace(/e/g, "enter")
         .replace(/i/g, "imes")
@@ -35,17 +31,14 @@ function encriptar(){
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
 
-    texto_nuevo;
-
     document.getElementById("texto-desencriptar").value = texto_nuevo;
     document.getElementById("texto-desencriptar").style.color = "#000000";
-    ocultarImagen();
+    mostrarResultado();
 }
 
-//Funcion desencriptar.
-function desencriptar(){
+// Función desencriptar
+function desencriptar() {
     let texto_nuevo = document.getElementById("texto-encriptar").value;
-    texto_nuevo;
     texto_nuevo = texto_nuevo
         .replace(/enter/g, "e")
         .replace(/imes/g, "i")
@@ -53,16 +46,13 @@ function desencriptar(){
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-        texto_nuevo;
-
     document.getElementById("texto-desencriptar").value = texto_nuevo;
     document.getElementById("texto-desencriptar").style.color = "#000000";
-    ocultarImagen();
+    mostrarResultado();
 }
 
-//Funcion copiar.
-function copiar(){
-    let texto_vacio = "";
+// Función copiar
+function copiar() {
     let texto_des = document.getElementById("texto-desencriptar").value;
     document.getElementById("texto-encriptar").placeholder = "";
 
@@ -70,10 +60,10 @@ function copiar(){
     text_copi.select();
     document.execCommand("copy");
 
-    if(texto_vacio !== texto_des){
+    if (texto_des !== "") {
         limpiar();
         foco();
-        //Alerta de completado.
+        // Alerta de completado
         Swal.fire({
             position: "center",
             icon: "success",
@@ -82,45 +72,49 @@ function copiar(){
             timer: 1500,
         });
         ocultarImagen();
-    }else{
-        //Alerta de error.
+    } else {
+        // Alerta de error
         Swal.fire({
             position: "center",
             icon: "warning",
-            title: "No se encotrado ningún texto a copiar",
+            title: "No se encontró ningún texto a copiar",
             showConfirmButton: false,
             timer: 1500,
         });
     }
 }
 
-//Funcion ocultar imagen.
-function ocultarImagen(){
-    let texto_vacio = "";
-    let text_area = document.getElementById("texto-desencriptar").value;
-    text_area;
-    if (texto_vacio !== text_area){
+// Función mostrar resultado
+function mostrarResultado() {
+    let texto_desencriptado = document.getElementById("texto-desencriptar").value;
+    if (texto_desencriptado.trim() !== "") {
+        document.querySelector(".result_output").style.display = "flex";
         document.getElementById("cubierta").style.display = "none";
-        $(".animacion").fadeIn(1000, function(){
-            $(".animacion").fadeOut(2000);
-        });
-    }else document.getElementById("cubierta").style.display = "";
+    } else {
+        document.querySelector(".result_output").style.display = "none";
+        document.getElementById("cubierta").style.display = "";
+    }
 }
 
-//funcion limpiar.
-function limpiar(){
+// Función ocultar imagen
+function ocultarImagen() {
+    mostrarResultado();
+}
+
+// Función limpiar
+function limpiar() {
     document.getElementById("texto-encriptar").value = "";
     document.getElementById("texto-desencriptar").value = "";
 }
 
-//Funcion focus.
-function foco(){
+// Función foco
+function foco() {
     document.getElementById("texto-encriptar").focus();
 }
 
-//Funcion focus
-function borrar(){
-    document.getElementById("texto-encriptar").placeholder = "Ingrese el texto aqui";
+// Función borrar
+function borrar() {
+    document.getElementById("texto-encriptar").placeholder = "Ingrese el texto aquí";
     document.getElementById("texto-desencriptar").placeholder = "";
     document.getElementById("texto-desencriptar").style.color = "#495057";
     limpiar();

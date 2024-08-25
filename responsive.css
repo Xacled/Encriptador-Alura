@@ -1,0 +1,181 @@
+/* Para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1025px) {
+    .general-container {
+      flex-direction: row;
+    }
+  
+    .left-container {
+      width: 50vw;
+      padding-top: 15vh;
+    }
+  
+    .right-container {
+      width: 400px;
+      height: auto;
+    }
+  
+    .input_text textarea {
+      font-size: 2em;
+    }
+  
+    .buttons {
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+  
+  /* Para pantallas medianas (tabletas y dispositivos similares) */
+  @media (max-width: 1024px) {
+    .general-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-container {
+      width: 80vw;
+      padding-top: 5vh;
+    }
+  
+    .right-container {
+      width: 80vw;
+      margin: 20px 0;
+    }
+  
+    .input_text {
+      width: 90%;
+    }
+  
+    .input_text textarea {
+      font-size: 1.5em;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    .button {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+  
+    .botonCopy {
+      width: 100%;
+    }
+  }
+  
+  /* Para pantallas pequeñas (teléfonos móviles) */
+  @media (max-width: 768px) {
+    
+    .general-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-container {
+      width: 90vw;
+      padding-top: 3vh;
+    }
+  
+    .right-container {
+      width: 90vw;
+      margin: 15px 0;
+      padding: 20px;
+    }
+  
+    .input_text {
+      width: 100%;
+    }
+  
+    .input_text textarea {
+      font-size: 1.2em;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 0.8em;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  
+    .botonCopy {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+    #Muneco {
+        display: none;
+    }
+  }
+
+/* Media query para pantallas pequeñas (ejemplo: hasta 600px de ancho) */
+
+  /* Para pantallas muy pequeñas (teléfonos compactos) */
+  @media (max-width: 480px) {
+    .general-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-container {
+      width: 100%;
+      padding-top: 2vh;
+    }
+  
+    .right-container {
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+    }
+  
+    .input_text textarea {
+      font-size: 1em;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+  
+    .button {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  
+    .botonCopy {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .bottom small {
+      font-size: 12px;
+      
+    }
+    #Muneco {
+        display: none;
+    }
+  }
+  
+  .container-encriptar-shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container-desencriptar-shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Ajusta estos estilos de acuerdo con tu diseño general */
+  .botonCopy {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  

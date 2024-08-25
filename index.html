@@ -4,64 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="main2.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Encriptador</title>
   </head>
   <body>
     <header>
-      <div class="container-logo-alura">
-        <a
-          class="a-logo-alura"
-          href="https://www.aluracursos.com"
-          target="_blank"
-          ><img class="logo-alura" src="assets\Logo.png" alt="logo de alura."
-        /></a>
+      <a class="logo" href="https://www.aluracursos.com" target="_blank">
+        <img class="logo-alura" src="assets/Logo.png" alt="logo de alura." />
+      </a>
+      <div class="logo container-xac">
+        <a class="logo " href="https://github.com/Xacled/Encriptador-Alura"
+        target="_blank">
+        <img class="logo-alura" src="assets/git.png" height="48px"
+          width="48px" />
+      </a>
+      <h1 class="logo">XAC</h1>
       </div>
     </header>
 
-    <main class="main">
-      <div class="container">
+    <main class="general-container">
+      <div class="left-container container-encriptar">
         <div class="input_text">
-          <textarea
-            class="input_text_encrypt"
-            id="input_text_encrypt"
-            placeholder="Ingrese texto aquí"
-          ></textarea>
+          <textarea class="input_text_encrypt texto-encriptar"
+            id="texto-encriptar" placeholder="Ingrese el texto aquí"></textarea>
           <div class="bottom">
-            <small
-              ><img src="./img/icon.svg" /> letras minusculas y sin
-              acentos</small
-            >
+            <small>
+              <img src="assets/Group.png" /> letras minúsculas y sin acentos
+            </small>
             <div class="buttons">
-              <button class="button button_encrypt" id="button_encrypt">
-                Encriptar
-              </button>
-              <button class="button button_decrypt" id="button_decrypt">
-                Desencriptar
-              </button>
+              <button class="button button_encrypt"
+                id="btn-encriptar">Encriptar</button>
+              <button class="button button_decrypt"
+                id="btn-desencriptar">Desencriptar</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!--Seccion desencriptar-->
-      <section class="general-div">
-        <div class="right-container">
-          <div class="right-content">
-            <img src="assets\Muñeco.png" alt="" sizes="" srcset="" />
-            <div>
-              <p class="texto">Ningun mensje fue encontrado</p>
-              <span>
-                Ingresa el texto que desees encriptar o desencriptar
-              </span>
-            </div>
-            <div>
-              <button class="botonCopy" id="btn-copiar">Copiar</button>
-            </div>
+      <div class="right-container" id="output_text">
+        <div id="cubierta" class="right-content">
+          <img id="Muneco" src="assets/Muñeco.png" alt="muneco">
+          <div>
+            <p class="texto">Ningún mensaje fue encontrado</p>
+            <span>Ingresa el texto que desees encriptar o desencriptar</span>
           </div>
         </div>
-      </section>
+        <div class="result_output">
+          <textarea class="output_text_decrypt"
+            id="texto-desencriptar"></textarea>
+          <button class="button button_decrypt button_copiar"
+            id="btn-copiar">Copiar</button>
+          <button class="button button_clear" id="btn-borrar-1">Borrar</button>
+
+        </div>
+      </div>
+
+
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
